@@ -2,6 +2,10 @@ import unittest
 import inspect
 import threading
 
+import logging
+
+logger = logging.getLogger(__name__)
+
 try:
     import Queue
 except ImportError:

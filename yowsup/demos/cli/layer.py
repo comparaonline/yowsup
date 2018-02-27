@@ -529,10 +529,11 @@ class YowsupCliLayer(Cli, YowInterfaceLayer):
 
 
     def getDownloadableMediaMessageBody(self, message):
-         return "[Media Type:{media_type}, Size:{media_size}, URL:{media_url}]".format(
+         return "[Media Type:{media_type}, Size:{media_size}, URL:{media_url}, Content:{media_content}]".format(
             media_type = message.getMediaType(),
             media_size = message.getMediaSize(),
-            media_url = message.getMediaUrl()
+            media_url = message.getMediaUrl(),
+            media_content=message.getMediaContent()
             )
 
     def doSendMedia(self, mediaType, filePath, url, to, ip = None, caption = None):

@@ -192,9 +192,9 @@ class AxolotlReceivelayer(AxolotlBaseLayer):
         elif m.HasField("url_message"):
             handled = True
             self.handleUrlMessage(node, m.url_message)
-        elif m.HasField("location_message"):
-            handled = True
-            self.handleLocationMessage(node, m.location_message)
+        # elif m.HasField("location_message"):
+        #     handled = True
+        #     self.handleLocationMessage(node, m.location_message)
         elif m.HasField("image_message"):
             handled = True
             self.handleImageMessage(node, m.image_message)
